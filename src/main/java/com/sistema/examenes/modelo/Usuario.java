@@ -17,7 +17,6 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int tipoUsuario;
     private String username;
     private String password;
     private String nombre;
@@ -35,9 +34,8 @@ public class Usuario implements UserDetails {
 
     }
 
-    public Usuario(Long id, int tipoUsuario, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil) {
+    public Usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil) {
         this.id = id;
-        this.tipoUsuario= tipoUsuario;
         this.username = username;
         this.password = password;
         this.nombre = nombre;
@@ -54,14 +52,6 @@ public class Usuario implements UserDetails {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public int getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(int tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
     }
 
     public String getUsername() {

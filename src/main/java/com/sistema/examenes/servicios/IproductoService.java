@@ -1,17 +1,26 @@
 package com.sistema.examenes.servicios;
 
+import com.sistema.examenes.modelo.Categoria;
 import com.sistema.examenes.modelo.Producto;
 
 import java.util.List;
+import java.util.Set;
 
 public interface IproductoService {
-    public List<Producto> listarProductos();
 
-    public Producto buscarProductoPorId(Integer idProducto);
+    Producto agregarProducto(Producto producto);
 
-    public Producto buscarProductoPorDescripcion(String descripcion);
+    Producto actualizarProducto(Producto producto);
 
-    public Producto guardarProducto(Producto producto);
+    Set<Producto> obtenerProductos();
 
-    public void eliminiarProductoPorId(Integer idProducto);
+    Producto obtenerProducto(Long productoId);
+
+    void eliminarProducto(Long productoId);
+
+    List<Producto> listarProductosDeUnaCategoria(Categoria categoria);
+
+    List<Producto> obtenerProductosActivos();
+
+    List<Producto> obtenerProductosActivosDeUnaCategoria(Categoria categoria);
 }
