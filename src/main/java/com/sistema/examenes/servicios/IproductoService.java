@@ -23,4 +23,8 @@ public interface IproductoService {
     List<Producto> obtenerProductosActivos();
 
     List<Producto> obtenerProductosActivosDeUnaCategoria(Categoria categoria);
+
+    public Producto buscarProductoPorId(Long productoId);
+
+    public Producto guardarProducto(Producto producto);
 }

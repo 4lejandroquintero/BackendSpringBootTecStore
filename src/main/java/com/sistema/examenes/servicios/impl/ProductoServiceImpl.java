@@ -49,6 +49,16 @@ public class ProductoServiceImpl implements IproductoService {
         return this.productoRepository.findByCategoria(categoria);
     }
 
+    @Override
+    public Producto buscarProductoPorId(Long productoId) {
+        Producto producto = this.productoRepository.findById(productoId).orElse(null);
+        return producto;
+    }
+
+    @Override
+    public Producto guardarProducto(Producto producto) {
+        return this.productoRepository.save(producto);
+    }
 
     @Override
     public List<Producto> obtenerProductosActivos() {

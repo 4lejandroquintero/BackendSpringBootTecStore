@@ -65,7 +65,7 @@ public class PreguntaController {
 
     @PostMapping("/evaluar-producto")
     public ResponseEntity<?> evaluarProducto(@RequestBody List<Pregunta> preguntas){
-        double existencia = 0;
+        double productuosMaximos = 0;
         Integer respuestasCorrectas = 0;
         Integer intentos = 0;
 
@@ -73,8 +73,8 @@ public class PreguntaController {
             Pregunta pregunta = this.preguntaService.listarPregunta(p.getPreguntaId());
             if(pregunta.getRespuesta().equals(p.getRespuestaDada())){
                 respuestasCorrectas ++;
-                double puntos = Double.parseDouble(preguntas.get(0).getProducto().getExistencia())/preguntas.size();
-                existencia += puntos;
+                double puntos = Double.parseDouble(preguntas.get(0).getProducto().getPrecio())/preguntas.size();
+                productuosMaximos += puntos;
             }
             if(p.getRespuestaDada() != null){
                 intentos ++;
@@ -82,7 +82,7 @@ public class PreguntaController {
         }
 
         Map<String,Object> respuestas = new HashMap<>();
-        respuestas.put("Existencias",existencia);
+        respuestas.put("Existencias",productuosMaximos);
         respuestas.put("comprasCorrectas",respuestasCorrectas);
         respuestas.put("intentos",intentos);
         return ResponseEntity.ok(respuestas);

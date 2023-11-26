@@ -29,6 +29,18 @@ public class ProductoController {
         return ResponseEntity.ok(producto);
     }
 
+    @PutMapping("/compra/{productoId}")
+    public ResponseEntity<Producto> comprarProducto(@PathVariable Long productoId, @RequestBody Producto productoRecibido) {
+        Producto producto = this.iproductoService.buscarProductoPorId(productoId);
+        if(producto == null)
+            throw new RecursoNoEncontradoExcepcion("No se encontro el id: " + productoId);
+        producto.setDescripcion(productoRecibido.getDescripcion());
+        producto.setPrecio(productoRecibido.getPrecio());
+        producto.setExistencia(productoRecibido.getExistencia());
+        this.iproductoService.guardarProducto(producto);
+        return ResponseEntity.ok(producto);
+    }
+
     @GetMapping("/")
     public ResponseEntity<?> listarProductos(){
         return ResponseEntity.ok(iproductoService.obtenerProductos());
@@ -62,4 +74,7 @@ public class ProductoController {
         categoria.setCategoriaId(categoriaId);
         return iproductoService.obtenerProductosActivosDeUnaCategoria(categoria);
     }
+
+
+
 }
