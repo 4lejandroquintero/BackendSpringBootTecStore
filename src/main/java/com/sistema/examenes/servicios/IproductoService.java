@@ -24,6 +24,8 @@ public interface IproductoService {
 
     List<Producto> obtenerProductosActivosDeUnaCategoria(Categoria categoria);
 
+    List<Producto> findByCodigo(String codigo);
+
     public Producto buscarProductoPorId(Long productoId);
 
     public Producto guardarProducto(Producto producto);

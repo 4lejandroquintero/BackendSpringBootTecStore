@@ -56,8 +56,13 @@ public class ProductoController {
         iproductoService.eliminarProducto(productoId);
     }
 
+    @GetMapping("/{codigo}")
+    public ResponseEntity<List<Producto>> listarProductosDeUnCodigo(@PathVariable("codigo") String codigo){
+        return ResponseEntity.ok(this.iproductoService.findByCodigo(codigo));
+    }
+
     @GetMapping("/categoria/{categoriaId}")
-    public List<Producto> listarProductosDeUnaCategoria(@PathVariable("categoriaId") Long categoriaId){
+    public List<Producto> listarProductosPorCodigo(@PathVariable("categoriaId") Long categoriaId){
         Categoria categoria = new Categoria();
         categoria.setCategoriaId(categoriaId);
         return iproductoService.listarProductosDeUnaCategoria(categoria);

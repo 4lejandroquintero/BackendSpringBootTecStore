@@ -49,6 +49,8 @@ public class ProductoServiceImpl implements IproductoService {
         return this.productoRepository.findByCategoria(categoria);
     }
 
+
+
     @Override
     public Producto buscarProductoPorId(Long productoId) {
         Producto producto = this.productoRepository.findById(productoId).orElse(null);
@@ -68,5 +70,10 @@ public class ProductoServiceImpl implements IproductoService {
     @Override
     public List<Producto> obtenerProductosActivosDeUnaCategoria(Categoria categoria) {
         return productoRepository.findByCategoriaAndActivo(categoria,true);
+    }
+
+    @Override
+    public List<Producto> findByCodigo(String codigo) {
+        return this.productoRepository.findByCodigo(codigo);
     }
 }

@@ -14,4 +14,6 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
     List<Producto> findByActivo(Boolean estado);
 
     List<Producto> findByCategoriaAndActivo(Categoria categoria,Boolean estado);
+
+    List<Producto> findByCodigo(String codigo);
 }

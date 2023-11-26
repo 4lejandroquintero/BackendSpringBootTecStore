@@ -1,7 +1,11 @@
 
 £
-java:S1186U"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(è¬£çıÿÿÿÿ8Åÿ¿1
+java:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(è¬£çıÿÿÿÿ8»¯ßÑÀ1
 X
-java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8÷ƒÅŠÀ1
+java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8®‚ğÑÀ1
+J
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8®‚ğÑÀ1
 R
-java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8øƒÅŠÀ1
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8®‚ğÑÀ1
+I
+java:S1128",Remove this unused import 'lombok.ToString'.(¹ÂÄÓ8®‚ğÑÀ1
