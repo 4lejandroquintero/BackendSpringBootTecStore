@@ -24,9 +24,13 @@ public class UsuarioController {
         Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
             Rol rol = new Rol();
+        if (!usuario.isAdmin()) {
             rol.setRolId(2L);
             rol.setRolNombre("NORMAL");
-
+        } else {
+            rol.setRolId(1L);
+            rol.setRolNombre("ADMIN");
+        }
             UsuarioRol usuarioRol = new UsuarioRol();
             usuarioRol.setUsuario(usuario);
             usuarioRol.setRol(rol);
@@ -34,6 +38,7 @@ public class UsuarioController {
             usuarioRoles.add(usuarioRol);
         return usuarioService.guardarUsuario(usuario,usuarioRoles);
     }
+
 
     @GetMapping("/{username}")
     public Usuario obtenerUsuario(@PathVariable("username") String username){
