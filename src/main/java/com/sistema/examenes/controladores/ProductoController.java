@@ -1,5 +1,6 @@
 package com.sistema.examenes.controladores;
 
+import com.sistema.examenes.excepcion.RecursoNoEncontradoExcepcion;
 import com.sistema.examenes.modelo.Categoria;
 import com.sistema.examenes.modelo.Producto;
 import com.sistema.examenes.servicios.IproductoService;
@@ -25,11 +26,11 @@ public class ProductoController {
 
     @PutMapping("/")
     public ResponseEntity<Producto> actualizarProducto(@RequestBody Producto producto){
-        return ResponseEntity.ok(iproductoService.actualizarProducto(producto));
+        return ResponseEntity.ok(producto);
     }
 
     @GetMapping("/")
-    public ResponseEntity<?> listarProducto(){
+    public ResponseEntity<?> listarProductos(){
         return ResponseEntity.ok(iproductoService.obtenerProductos());
     }
 

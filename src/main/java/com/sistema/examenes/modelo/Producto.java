@@ -11,19 +11,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Data
-@ToString
 @Table(name = "productos")
 public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long idProducto;
+    private Long productoId;
 
-    String codigo;
-    String descripcion;
-    Double precio;
-    String existencia;
+    private String codigo;
+    private String descripcion;
+    private String precio;
+    private String existencia;
     private boolean activo = false;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -33,12 +31,12 @@ public class Producto {
     @JsonIgnore
     private Set<Pregunta> preguntas = new HashSet<>();
 
-    public Long getIdProducto() {
-        return idProducto;
+    public Long getProductoId() {
+        return productoId;
     }
 
-    public void setIdProducto(Long idProducto) {
-        this.idProducto = idProducto;
+    public void setProductoId(Long productoId) {
+        this.productoId = productoId;
     }
 
     public String getCodigo() {
@@ -57,11 +55,11 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public Double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 

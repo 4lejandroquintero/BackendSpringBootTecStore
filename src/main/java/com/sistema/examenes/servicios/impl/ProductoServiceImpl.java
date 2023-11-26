@@ -40,7 +40,7 @@ public class ProductoServiceImpl implements IproductoService {
     @Override
     public void eliminarProducto(Long productoId) {
         Producto producto = new Producto();
-        producto.setIdProducto(productoId);
+        producto.setProductoId(productoId);
         productoRepository.delete(producto);
     }
 
@@ -48,6 +48,7 @@ public class ProductoServiceImpl implements IproductoService {
     public List<Producto> listarProductosDeUnaCategoria(Categoria categoria) {
         return this.productoRepository.findByCategoria(categoria);
     }
+
 
     @Override
     public List<Producto> obtenerProductosActivos() {

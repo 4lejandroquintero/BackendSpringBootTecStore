@@ -58,7 +58,7 @@ public class PreguntaController {
     @GetMapping("/producto/todos/{productoId}")
     public ResponseEntity<?> listarPreguntaDelProductoComoAdministrador(@PathVariable("productoId") Long productoId){
         Producto producto = new Producto();
-        producto.setIdProducto(productoId);
+        producto.setProductoId(productoId);
         Set<Pregunta> preguntas = preguntaService.obtenerPreguntasDelProducto(producto);
         return ResponseEntity.ok(preguntas);
     }
