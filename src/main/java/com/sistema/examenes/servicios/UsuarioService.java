@@ -11,5 +11,7 @@ public interface UsuarioService {
 
     public Usuario obtenerUsuario(String username);
 
+    public Usuario obtenerUsuarioWithUsernameOrEmail(String usernameOrEmail);
+
     public void eliminarUsuario(Long usuarioId);
 }
