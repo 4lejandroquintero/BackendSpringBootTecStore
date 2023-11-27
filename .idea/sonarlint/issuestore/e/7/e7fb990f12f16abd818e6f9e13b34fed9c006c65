@@ -1,6 +1,6 @@
 
 P
-java:S1948 ".Make "usuarioRoles" transient or serializable.(–´Ğòıÿÿÿÿ8Ï™ÇÀ1
-^	java:S107&"BConstructor has 10 parameters, which is greater than 7 authorized.(Ê²úÊ8‘Ï™ÇÀ1
+java:S1948!".Make "usuarioRoles" transient or serializable.(–´Ğòıÿÿÿÿ8ìŠöñÀ1
+^	java:S107'"BConstructor has 10 parameters, which is greater than 7 authorized.(Ê²úÊ8ïŠöñÀ1
 I
-java:S1602U",Remove useless curly braces around statement(ÍÌå‰8”Ï™ÇÀ1
+java:S1602V",Remove useless curly braces around statement(ÍÌå‰8øŠöñÀ1

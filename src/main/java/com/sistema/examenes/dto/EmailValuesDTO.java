@@ -6,17 +6,17 @@ public class EmailValuesDTO {
     private String mailTo;
     private String subject;
     private String userName;
-    private String jwt;
+    private String tokenPassword;
 
     public EmailValuesDTO() {
     }
 
-    public EmailValuesDTO(String mailFrom, String mailTo, String subject, String userName, String jwt) {
+    public EmailValuesDTO(String mailFrom, String mailTo, String subject, String userName, String tokenPassword) {
         this.mailFrom = mailFrom;
         this.mailTo = mailTo;
         this.subject = subject;
         this.userName = userName;
-        this.jwt = jwt;
+        this.tokenPassword = tokenPassword;
     }
 
     public String getMailFrom() {
@@ -51,11 +51,11 @@ public class EmailValuesDTO {
         this.userName = userName;
     }
 
-    public String getJwt() {
-        return jwt;
+    public String getTokenPassword() {
+        return tokenPassword;
     }
 
-    public void setJwt(String jwt) {
-        this.jwt = jwt;
+    public void setTokenPassword(String jwt) {
+        this.tokenPassword = tokenPassword;
     }
 }

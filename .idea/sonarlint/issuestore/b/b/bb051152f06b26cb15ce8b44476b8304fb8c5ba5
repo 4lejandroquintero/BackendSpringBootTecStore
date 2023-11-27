@@ -1,3 +1,35 @@
 
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¾Çèùşÿÿÿÿ
-@	java:S106"+Replace this use of System.out by a logger.(¤Üñé
+g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(¾Çèùşÿÿÿÿ8£õÀ1
+£
+java:S1186]"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Æş¤úÿÿÿÿ8Á£õÀ1
+£
+java:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¾İÀõùÿÿÿÿ8Â£õÀ1
+£
+java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Îİ–Éşÿÿÿÿ8Â£õÀ1
+
+java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•³ùÂ8Â£õÀ1
+
+java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“ç¹Í8Ã£õÀ1
+Ÿ
+java:S1186Š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã®¸Â8Ã£õÀ1
+¤
+java:S1186™"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§ºØ¬øÿÿÿÿ8Ã£õÀ1
+¤
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ï½Æšıÿÿÿÿ8Ã£õÀ1
+¤
+java:S1186£"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œÛ±üÿÿÿÿ8Ã£õÀ1
+G	java:S106""+Replace this use of System.out by a logger.(¤Üñé8Ò£õÀ1
+H
+java:S1168E"+Return an empty collection instead of null.(¥¹ï8Ü£õÀ1
+H
+java:S1168J"+Return an empty collection instead of null.(¥¹ï8Ş£õÀ1
+H
+java:S1168T"+Return an empty collection instead of null.(¥¹ï8á£õÀ1
+H
+java:S1168|"+Return an empty collection instead of null.(¥¹ï8å£õÀ1
+I
+java:S1168•"+Return an empty collection instead of null.(¥¹ï8é£õÀ1
+I
+java:S1168¸"+Return an empty collection instead of null.(¥¹ï8ğ£õÀ1
+I
+java:S1168½"+Return an empty collection instead of null.(¥¹ï8ò£õÀ1

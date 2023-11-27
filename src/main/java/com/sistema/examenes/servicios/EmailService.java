@@ -27,7 +27,7 @@ public class EmailService {
     @Value("${mail.urlFront}")
     private String urlFront;
 
-    public void sendEmail(){
+   /* public void sendEmail(){
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("alejoq96@gmail.com");
         message.setTo("alejoq96@gmail.com");
@@ -35,16 +35,16 @@ public class EmailService {
         message.setText("Esto es el contenido del email");
 
         javaMailSender.send(message);
-    }
+    } */
 
-    public void sendEmailTemplate(EmailValuesDTO dto){
+    public void sendEmail(EmailValuesDTO dto){
         MimeMessage message = javaMailSender.createMimeMessage();
         try {
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             Context context = new Context();
             Map<String, Object> model = new HashMap<>();
             model.put("userName", dto.getUserName());
-            model.put("url", urlFront + dto.getJwt());
+            model.put("url", urlFront + dto.getTokenPassword());
             context.setVariables(model);
             String htmlText = templateEngine.process("email-template", context);
             helper.setFrom(dto.getMailFrom());

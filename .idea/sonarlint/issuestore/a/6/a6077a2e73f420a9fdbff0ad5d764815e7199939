@@ -1,9 +1,19 @@
 
+Q
+java:S37405"/Provide the parametrized type for this generic.(è§Äíşÿÿÿÿ8ƒ¥¸õÀ1
+Q
+java:S3740B"/Provide the parametrized type for this generic.(•°œÖÿÿÿÿÿ8„¥¸õÀ1
+L
+java:S3740H"/Provide the parametrized type for this generic.(±£ãË8„¥¸õÀ1
+L
+java:S3740J"/Provide the parametrized type for this generic.(È§ìÑ8„¥¸õÀ1
+Q
+java:S3740M"/Provide the parametrized type for this generic.(è§Äíşÿÿÿÿ8„¥¸õÀ1
 K
-java:S3740"/Provide the parametrized type for this generic.(„Õ° 8€ß£À1
-K
-java:S3740"/Provide the parametrized type for this generic.(ÔÇ¸8ß£À1
+java:S3740T"/Provide the parametrized type for this generic.(şÜë8ÂÊ¹õÀ1
+{	java:S115-"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ƒ¶±íÿÿÿÿÿ8¦¥¸õÀ1
+]	java:S125%"<This block of commented-out lines of code should be removed.(²Âñÿÿÿÿÿ8¯¥¸õÀ1
 H
-java:S1452"&Remove usage of generic wildcard type.(²Âñÿÿÿÿÿ8ß£À1
-H
-java:S1452"&Remove usage of generic wildcard type.(¼£¶øÿÿÿÿ8«ß£À1
+java:S14522"&Remove usage of generic wildcard type.(¼£¶øÿÿÿÿ8³¥¸õÀ1
+C
+java:S1452F"&Remove usage of generic wildcard type.(µ—­â8º¥¸õÀ1

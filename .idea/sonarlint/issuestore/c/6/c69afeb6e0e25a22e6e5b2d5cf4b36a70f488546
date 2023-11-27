@@ -1,6 +1,6 @@
 
-C
-java:S54113"(Use a primitive boolean expression here.(•æˆóÿÿÿÿÿ
-@	java:S106("+Replace this use of System.out by a logger.(ðç×¬
-E	java:S106."+Replace this use of System.out by a logger.(Êµ¢¯üÿÿÿÿ
-@	java:S106:"+Replace this use of System.out by a logger.(ÜÜ»í
+J
+java:S54113"(Use a primitive boolean expression here.(•æˆóÿÿÿÿÿ8¢ˆ³ôÀ1
+G	java:S106("+Replace this use of System.out by a logger.(ðç×¬8åˆ³ôÀ1
+L	java:S106."+Replace this use of System.out by a logger.(Êµ¢¯üÿÿÿÿ8åˆ³ôÀ1
+G	java:S106:"+Replace this use of System.out by a logger.(ÜÜ»í8èˆ³ôÀ1

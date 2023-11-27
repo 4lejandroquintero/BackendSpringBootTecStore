@@ -81,3 +81,5 @@ z
 Jsrc/main/java/com/sistema/examenes/servicios/impl/PreguntaServiceImpl.java,1\9\196cbe34a9e4a49b88bd6b33eed73d58810187f9
 x
 Hsrc/main/java/com/sistema/examenes/controladores/PreguntaController.java,9\4\9407193c63503c2dde0570d5169eb2eb2bc1716b
+m
+=src/main/java/com/sistema/examenes/dto/ChangePasswordDTO.java,c\7\c706ff2432cffe657d2c570c2ecae3489b53c274
