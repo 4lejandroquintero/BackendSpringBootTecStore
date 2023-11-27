@@ -2,6 +2,7 @@ package com.sistema.examenes.configuraciones;
 
 import com.sistema.examenes.servicios.impl.UserDetailsServiceImpl;
 import io.jsonwebtoken.ExpiredJwtException;
+import org.apache.tomcat.util.http.parser.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -26,8 +27,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private JwtUtils jwtUtil;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
         String requestTokenHeader = request.getHeader("Authorization");
+
+        System.out.println("Token:" + requestTokenHeader);
+
         String username = null;
         String jwtToken = null;
 
