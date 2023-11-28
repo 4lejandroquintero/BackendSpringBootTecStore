@@ -1,5 +1,5 @@
 
-Q
-java:S1874*";Remove this use of "NoOpPasswordEncoder"; it is deprecated.(å‰ö
-x
-java:S1128"]Remove this unused import 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder'.(åÅÚ…ûÿÿÿÿ
+X
+java:S1874*";Remove this use of "NoOpPasswordEncoder"; it is deprecated.(å‰ö8Œ×ÎˆÁ1
+
+java:S1128"]Remove this unused import 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder'.(åÅÚ…ûÿÿÿÿ8¢×ÎˆÁ1

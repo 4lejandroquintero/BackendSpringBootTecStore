@@ -5,6 +5,7 @@ import com.sistema.examenes.modelo.Usuario;
 import com.sistema.examenes.modelo.UsuarioRol;
 import com.sistema.examenes.servicios.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
@@ -12,15 +13,21 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/usuarios")
-
+@CrossOrigin("*")
 public class UsuarioController {
 
     @Autowired
     private UsuarioService usuarioService;
 
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @PostMapping("/")
     public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
         usuario.setPerfil("default.png");
+
+        usuario.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
+
         Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
             Rol rol = new Rol();

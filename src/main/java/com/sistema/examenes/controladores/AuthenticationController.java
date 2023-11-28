@@ -1,6 +1,7 @@
 package com.sistema.examenes.controladores;
 
 import com.sistema.examenes.configuraciones.JwtUtils;
+import com.sistema.examenes.excepcion.UsuarioNotFoundException;
 import com.sistema.examenes.modelo.JwtRequest;
 import com.sistema.examenes.modelo.JwtResponse;
 import com.sistema.examenes.modelo.Usuario;
@@ -31,30 +32,30 @@ public class AuthenticationController {
 
     @PostMapping("/generate-token")
     public ResponseEntity<?> generarToken(@RequestBody JwtRequest jwtRequest) throws Exception {
-        try{
-            autenticar(jwtRequest.getUsername(),jwtRequest.getPassword());
-        }catch (Exception exception){
+        try {
+            autenticar(jwtRequest.getUsername(), jwtRequest.getPassword());
+        } catch (UsuarioNotFoundException exception) {
             exception.printStackTrace();
             throw new Exception("Usuario no encontrado");
         }
 
-        UserDetails userDetails =  this.userDetailsService.loadUserByUsername(jwtRequest.getUsername());
+        UserDetails userDetails = this.userDetailsService.loadUserByUsername(jwtRequest.getUsername());
         String token = this.jwtUtils.generateToken(userDetails);
         return ResponseEntity.ok(new JwtResponse(token));
     }
 
-    private void autenticar(String username,String password) throws Exception {
-        try{
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username,password));
-        }catch (DisabledException exception){
-            throw  new Exception("USUARIO DESHABILITADO " + exception.getMessage());
-        }catch (BadCredentialsException e){
-            throw  new Exception("Credenciales invalidas " + e.getMessage());
+    private void autenticar(String username, String password) throws Exception {
+        try {
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+        } catch (DisabledException exception) {
+            throw new Exception("USUARIO DESHABILITADO " + exception.getMessage());
+        } catch (BadCredentialsException e) {
+            throw new Exception("Credenciales invalidas " + e.getMessage());
         }
     }
 
     @GetMapping("/actual-usuario")
-    public Usuario obtenerUsuarioActual(Principal principal){
+    public Usuario obtenerUsuarioActual(Principal principal) {
         return (Usuario) this.userDetailsService.loadUserByUsername(principal.getName());
     }
 }

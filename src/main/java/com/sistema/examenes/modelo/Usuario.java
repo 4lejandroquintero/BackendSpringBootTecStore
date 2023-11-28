@@ -26,7 +26,6 @@ public class Usuario implements UserDetails {
     private boolean admin = true;
     private boolean enabled = true;
     private String perfil;
-    private String tokenPassword;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "usuario")
     @JsonIgnore
@@ -151,14 +150,6 @@ public class Usuario implements UserDetails {
 
     public void setPerfil(String perfil) {
         this.perfil = perfil;
-    }
-
-    public String getTokenPassword() {
-        return tokenPassword;
-    }
-
-    public void setTokenPassword(String tokenPassword) {
-        this.tokenPassword = tokenPassword;
     }
 
     public Set<UsuarioRol> getUsuarioRoles() {

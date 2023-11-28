@@ -17,3 +17,5 @@ H
 java:S14522"&Remove usage of generic wildcard type.(¼£¶øÿÿÿÿ8³¥¸õÀ1
 C
 java:S1452F"&Remove usage of generic wildcard type.(µ—­â8º¥¸õÀ1
+l
+java:S1128"JRemove this unused import 'javax.security.enterprise.credential.Password'.(Ğ²ëùıÿÿÿÿ8¶ò€‡Á1
