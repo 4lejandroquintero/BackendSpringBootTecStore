@@ -37,14 +37,8 @@ f
 6src/main/java/com/sistema/examenes/modelo/Usuario.java,e\7\e7fb990f12f16abd818e6f9e13b34fed9c006c65
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-
-Osrc/main/java/com/sistema/examenes/configuraciones/ThymeleafTemplateConfig.java,f\0\f0711e742d5c438083668442ad15c3ec7b5f928f
 j
 :src/main/java/com/sistema/examenes/dto/EmailValuesDTO.java,9\d\9d8eced93502148748e6afa113e213fd93896faf
-n
->src/main/java/com/sistema/examenes/servicios/EmailService.java,5\3\5399735fd2d77565c59799357adbd63c9f2d213f
-u
-Esrc/main/java/com/sistema/examenes/controladores/EmailController.java,a\6\a6077a2e73f420a9fdbff0ad5d764815e7199939
 ~
 Nsrc/main/java/com/sistema/examenes/controladores/AuthenticationController.java,2\2\22a347b352395c0536bef3467a4f58078b3f22e2
 i
@@ -83,3 +77,7 @@ x
 Hsrc/main/java/com/sistema/examenes/controladores/PreguntaController.java,9\4\9407193c63503c2dde0570d5169eb2eb2bc1716b
 m
 =src/main/java/com/sistema/examenes/dto/ChangePasswordDTO.java,c\7\c706ff2432cffe657d2c570c2ecae3489b53c274
+c
+3src/main/java/com/sistema/examenes/dto/Mensaje.java,6\2\6217cfe904e3863df4a9b24303edb1a903d45286
+r
+Bsrc/main/java/com/sistema/examenes/repositorios/RolRepository.java,a\d\ad4f6fb1e26c8f47a5a8b180db2c33aa650a107a

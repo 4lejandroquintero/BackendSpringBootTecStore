@@ -5,6 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,13 +18,21 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     private String username;
+    @NotNull
     private String password;
+    @NotNull
     private String nombre;
+    @NotNull
     private String apellido;
+    @NotNull
     private String email;
+    @NotNull
     private String telefono;
+    @NotNull
     private boolean admin = true;
+    private String tokenPassword;
     private boolean enabled = true;
     private String perfil;
 
@@ -35,16 +44,13 @@ public class Usuario implements UserDetails {
 
     }
 
-    public Usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil, boolean admin) {
-        this.id = id;
+    public Usuario(String username, String password, String nombre, String apellido, String email, String telefono, boolean admin) {
         this.username = username;
         this.password = password;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
-        this.enabled = enabled;
-        this.perfil = perfil;
         this.admin = admin;
     }
 
@@ -142,6 +148,14 @@ public class Usuario implements UserDetails {
 
     public void setAdmin(boolean admin) {
         this.admin = admin;
+    }
+
+    public String getTokenPassword() {
+        return tokenPassword;
+    }
+
+    public void setTokenPassword(String tokenPassword) {
+        this.tokenPassword = tokenPassword;
     }
 
     public String getPerfil() {

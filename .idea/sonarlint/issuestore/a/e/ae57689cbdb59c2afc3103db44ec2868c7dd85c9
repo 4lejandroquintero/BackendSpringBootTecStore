@@ -1,6 +1,10 @@
 
-q	java:S116"URename this field "SECRET_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«­—¬8€¨ï¡Á1
-g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¤µÄ×ÿÿÿÿÿ8¯÷ú¡Á1
+q	java:S116"URename this field "SECRET_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«­—¬8©ß˜ÈÁ1
+I
+java:S1128"-Remove this unused import 'org.slf4j.Logger'.(íØ®68¿ß˜ÈÁ1
+Q
+java:S1128"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ8¿ß˜ÈÁ1
+l
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8¿ß˜ÈÁ1
 `
-java:S1128	"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8ïäˆ¢Á1
+java:S1128	"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8âÖŞÆÁ1

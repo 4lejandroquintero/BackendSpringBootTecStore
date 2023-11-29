@@ -1,35 +1,21 @@
 
-g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(¾Çèùşÿÿÿÿ8£õÀ1
-£
-java:S1186]"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Æş¤úÿÿÿÿ8Á£õÀ1
-£
-java:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¾İÀõùÿÿÿÿ8Â£õÀ1
-£
-java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Îİ–Éşÿÿÿÿ8Â£õÀ1
 
-java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•³ùÂ8Â£õÀ1
-
-java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“ç¹Í8Ã£õÀ1
-Ÿ
-java:S1186Š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã®¸Â8Ã£õÀ1
-¤
-java:S1186™"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§ºØ¬øÿÿÿÿ8Ã£õÀ1
-¤
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ï½Æšıÿÿÿÿ8Ã£õÀ1
-¤
-java:S1186£"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œÛ±üÿÿÿÿ8Ã£õÀ1
-G	java:S106""+Replace this use of System.out by a logger.(¤Üñé8Ò£õÀ1
-H
-java:S1168E"+Return an empty collection instead of null.(¥¹ï8Ü£õÀ1
-H
-java:S1168J"+Return an empty collection instead of null.(¥¹ï8Ş£õÀ1
-H
-java:S1168T"+Return an empty collection instead of null.(¥¹ï8á£õÀ1
-H
-java:S1168|"+Return an empty collection instead of null.(¥¹ï8å£õÀ1
-I
-java:S1168•"+Return an empty collection instead of null.(¥¹ï8é£õÀ1
-I
-java:S1168¸"+Return an empty collection instead of null.(¥¹ï8ğ£õÀ1
-I
-java:S1168½"+Return an empty collection instead of null.(¥¹ï8ò£õÀ1
+java:S1186;"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(º†Ï¥8˜æ®ÈÁ1
+G	java:S106#"+Replace this use of System.out by a logger.(¤Üñé8¹ù¤ÈÁ1
+f
+java:S1128
+"DRemove this unused import 'org.springframework.data.domain.Example'.(³˜œÍüÿÿÿÿ8 æ®ÈÁ1
+c
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Page'.(˜âüÿÿÿÿ8 æ®ÈÁ1
+g
+java:S1128"ERemove this unused import 'org.springframework.data.domain.Pageable'.(‡ë‚Öıÿÿÿÿ8 æ®ÈÁ1
+c
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Sort'.(ëÿ€ëøÿÿÿÿ8 æ®ÈÁ1
+o
+java:S1128"RRemove this unused import 'org.springframework.data.repository.query.FluentQuery'.(õ‘Â¬8 æ®ÈÁ1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8 æ®ÈÁ1
+Q
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8 æ®ÈÁ1
+U
+java:S1128"8Remove this unused import 'java.util.function.Function'.(»³Í8 æ®ÈÁ1

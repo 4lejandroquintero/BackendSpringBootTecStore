@@ -2,10 +2,12 @@ package com.sistema.examenes.servicios;
 
 import com.sistema.examenes.modelo.Categoria;
 import com.sistema.examenes.modelo.Producto;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Set;
 
+@Service
 public interface IproductoService {
 
     Producto agregarProducto(Producto producto);

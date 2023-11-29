@@ -1,9 +1,11 @@
 package com.sistema.examenes.servicios;
 
 import com.sistema.examenes.modelo.Categoria;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public interface CategoriaService {
 
     Categoria agregarCategoria(Categoria categoria);

@@ -30,7 +30,7 @@ public class UsuarioController {
 
         Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
-            Rol rol = new Rol();
+        Rol rol = new Rol();
         if (!usuario.isAdmin()) {
             rol.setRolId(2L);
             rol.setRolNombre("NORMAL");
@@ -38,11 +38,11 @@ public class UsuarioController {
             rol.setRolId(1L);
             rol.setRolNombre("ADMIN");
         }
-            UsuarioRol usuarioRol = new UsuarioRol();
-            usuarioRol.setUsuario(usuario);
-            usuarioRol.setRol(rol);
+        UsuarioRol usuarioRol = new UsuarioRol();
+        usuarioRol.setUsuario(usuario);
+        usuarioRol.setRol(rol);
 
-            usuarioRoles.add(usuarioRol);
+        usuarioRoles.add(usuarioRol);
         return usuarioService.guardarUsuario(usuario,usuarioRoles);
     }
 

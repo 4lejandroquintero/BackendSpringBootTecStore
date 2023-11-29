@@ -1,7 +1,0 @@
-
-à
-java:S4165;"kRemove this useless assignment; "tokenPassword" already holds the assigned value along all execution paths.(§Í›‚8â‰•Ú¿1
-G
-java:S1172:"*Remove this unused method parameter "jwt".(π®Ü‚8è‰•Ú¿1
-L
-java:S1656;"/Remove or correct this useless self-assignment.(§Í›‚8ê‰•Ú¿1
