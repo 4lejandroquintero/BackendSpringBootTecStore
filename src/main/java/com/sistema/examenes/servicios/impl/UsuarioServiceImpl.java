@@ -7,17 +7,10 @@ import com.sistema.examenes.repositorios.RolRepository;
 import com.sistema.examenes.repositorios.UsuarioRepository;
 import com.sistema.examenes.servicios.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.function.Function;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
@@ -60,4 +53,36 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     }
 
+
+
+    @Override
+    public String obtenerPreguntaSecreta(String username) {
+        Usuario usuario = usuarioRepository.findByUsername(username);
+        return usuario != null ? usuario.getPreguntaSecreta() : null;
+    }
+
+    @Override
+    public Optional<Usuario> recuperarUsuario(String preguntaSecreta, String respuestaSecreta) {
+        return Optional.empty();
+    }
+
+    public Usuario obtenerUsuarioPorNombre(String nombreUsuario) {
+        return usuarioRepository.findByUsername(nombreUsuario);
+    }
+
+
+    public boolean validarPreguntaRespuesta(String nombreUsuario, String preguntaSecreta, String respuestaSecreta) {
+        Usuario usuario = obtenerUsuarioPorNombre(nombreUsuario);
+
+        return usuario != null && preguntaSecreta.equals(usuario.getPreguntaSecreta()) && respuestaSecreta.equals(usuario.getRespuestaSecreta());
+    }
+
+    public void cambiarClave(String nombreUsuario, String nuevaClave) {
+        Usuario usuario = obtenerUsuarioPorNombre(nombreUsuario);
+
+        if (usuario != null) {
+            usuario.setPassword(nuevaClave);
+            usuarioRepository.save(usuario);
+        }
+    }
 }

@@ -32,8 +32,9 @@ public class Usuario implements UserDetails {
     private String telefono;
     @NotNull
     private boolean admin = true;
-    private String tokenPassword;
     private boolean enabled = true;
+    private String preguntaSecreta;
+    private String respuestaSecreta;
     private String perfil;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "usuario")
@@ -44,13 +45,15 @@ public class Usuario implements UserDetails {
 
     }
 
-    public Usuario(String username, String password, String nombre, String apellido, String email, String telefono, boolean admin) {
+    public Usuario(String username, String password, String nombre, String apellido, String email, String telefono, boolean admin, String preguntaSecreta, String respuestaSecreta) {
         this.username = username;
         this.password = password;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
+        this.preguntaSecreta = preguntaSecreta;
+        this.respuestaSecreta = respuestaSecreta;
         this.admin = admin;
     }
 
@@ -142,20 +145,28 @@ public class Usuario implements UserDetails {
         this.enabled = enabled;
     }
 
+    public String getPreguntaSecreta() {
+        return preguntaSecreta;
+    }
+
+    public void setPreguntaSecreta(String preguntaSecreta) {
+        this.preguntaSecreta = preguntaSecreta;
+    }
+
+    public String getRespuestaSecreta() {
+        return respuestaSecreta;
+    }
+
+    public void setRespuestaSecreta(String respuestaSecreta) {
+        this.respuestaSecreta = respuestaSecreta;
+    }
+
     public boolean isAdmin() {
         return admin;
     }
 
     public void setAdmin(boolean admin) {
         this.admin = admin;
-    }
-
-    public String getTokenPassword() {
-        return tokenPassword;
-    }
-
-    public void setTokenPassword(String tokenPassword) {
-        this.tokenPassword = tokenPassword;
     }
 
     public String getPerfil() {

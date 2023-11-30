@@ -1,14 +1,20 @@
 package com.sistema.examenes.controladores;
 
+import com.sistema.examenes.modelo.RecuperarClaveRequest;
 import com.sistema.examenes.modelo.Rol;
 import com.sistema.examenes.modelo.Usuario;
 import com.sistema.examenes.modelo.UsuarioRol;
+import com.sistema.examenes.repositorios.UsuarioRepository;
 import com.sistema.examenes.servicios.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 @RestController
@@ -18,6 +24,9 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioService usuarioService;
+
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -57,4 +66,18 @@ public class UsuarioController {
         usuarioService.eliminarUsuario(usuarioId);
     }
 
+    @PostMapping("/recuperar-usuario")
+    public String recuperarClave(@RequestBody RecuperarClaveRequest request) {
+        String nombreUsuario = request.getNombreUsuario();
+        String preguntaSecreta = request.getPreguntaSecreta();
+        String respuestaSecreta = request.getRespuestaSecreta();
+        String nuevaClave = request.getNuevaClave();
+
+        if (usuarioService.validarPreguntaRespuesta(nombreUsuario, preguntaSecreta, respuestaSecreta)) {
+            usuarioService.cambiarClave(nombreUsuario, nuevaClave);
+            return "Clave recuperada exitosamente.";
+        } else {
+            return "Validación de pregunta y respuesta fallida.";
+        }
+    }
 }
